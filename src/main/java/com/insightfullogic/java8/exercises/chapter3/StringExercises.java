@@ -10,6 +10,7 @@ public class StringExercises {
 
     // Question 7
     public static int countLowercaseLetters(String string) {
+    	string.chars()
         return Exercises.replaceThisWithSolution();
     }
 

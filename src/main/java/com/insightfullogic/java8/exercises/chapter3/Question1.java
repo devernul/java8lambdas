@@ -21,7 +21,9 @@ public class Question1 {
     }
 
     public static List<Album> getAlbumsWithAtMostThreeTracks(List<Album> input) {
-        return Exercises.replaceThisWithSolution();
+    	return input.stream()
+    			.filter((album -> album.getTrackList().size() < 4))
+    			.collect(toList());
     }
     
     public static void main(String[] args){
