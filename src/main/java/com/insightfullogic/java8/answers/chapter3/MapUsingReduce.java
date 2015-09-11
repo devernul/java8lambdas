@@ -27,5 +27,4 @@ public class MapUsingReduce {
             return newLeft;
         });
     }
-
 }

@@ -5,6 +5,7 @@ import com.insightfullogic.java8.exercises.Exercises;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -13,7 +14,6 @@ import java.util.stream.Stream;
 public class FilterUsingReduce {
 
     public static <I> List<I> filter(Stream<I> stream, Predicate<I> predicate) {
-        return Exercises.replaceThisWithSolution();
+    	return stream.filter(predicate).collect(Collectors.toList());
     }
-
 }
