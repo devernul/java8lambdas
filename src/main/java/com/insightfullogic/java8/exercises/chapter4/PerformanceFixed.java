@@ -15,7 +15,8 @@ public interface PerformanceFixed {
     public Stream<Artist> getMusicians();
 
     public default Stream<Artist> getAllMusicians() {
-        return Exercises.replaceThisWithSolution();
+    	//return getMusicians().flatMap(a -> { if(a.isSolo()) return Stream.of(a); else return Stream.concat(Stream.of(a), a.getMembers());});
+    	//return getMusicians().flatMap(a -> { return Stream.concat(Stream.of(a), a.getMembers());});
+    	return getMusicians().flatMap(a -> concat(Stream.of(a), a.getMembers()));
     }
-
 }

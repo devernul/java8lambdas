@@ -10,5 +10,5 @@ public interface Performance {
     public String getName();
 
     public Stream<Artist> getMusicians();
-
+    
 }
